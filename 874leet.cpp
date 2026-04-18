@@ -43,7 +43,7 @@ bool check(unordered_map<pair<int, int>, bool, pair_hash>& obstacles,
 }
 
 void move(tuple<int, int, int>& p, int command,
-          unordered_map<pair<int, int>, bool, pair_hash>& obs, int& dist) {
+    unordered_map<pair<int, int>, bool, pair_hash>& obs, int& dist) {
     auto& [a, b, c] = p;
     if (command == -1) {
         c = (c + 3) % 4;
