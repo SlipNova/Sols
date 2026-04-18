@@ -23,8 +23,7 @@ int distance(tuple<int, int, int>& pos) {
     return a * a + b * b;
 }
 
-bool check(unordered_map<pair<int, int>, bool, pair_hash>& obstacles,
-           tuple<int, int, int>& pos) {
+bool check(unordered_map<pair<int, int>, bool, pair_hash>& obstacles, tuple<int, int, int>& pos) {
     auto& [x, y, o] = pos;
     pair<int, int> p = {x, y};
     if (obstacles.find(p) != obstacles.end()) {
@@ -42,8 +41,7 @@ bool check(unordered_map<pair<int, int>, bool, pair_hash>& obstacles,
     return false;
 }
 
-void move(tuple<int, int, int>& p, int command,
-    unordered_map<pair<int, int>, bool, pair_hash>& obs, int& dist) {
+void move(tuple<int, int, int>& p, int command, unordered_map<pair<int, int>, bool, pair_hash>& obs, int& dist) {
     auto& [a, b, c] = p;
     if (command == -1) {
         c = (c + 3) % 4;
